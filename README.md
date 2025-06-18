@@ -6,7 +6,6 @@ Welcome to my cloud playground! This repository showcases hands-on AWS infrastru
 
 - **CloudFormation Templates** – Automate VPCs, EC2 instances, IAM roles, and more.
 - **Architecture Diagrams** – Visualize infrastructure using Lucidchart and Mermaid.
-- **Mini Labs & Experiments** – Real-world AWS scenarios and sandbox testing.
 
 ## 🛠️ Technologies Used
 
@@ -16,7 +15,7 @@ Welcome to my cloud playground! This repository showcases hands-on AWS infrastru
 - Git & GitHub for version control
 
 ## 📂 Folder Structure
-AWS-/
+AWS
 ├── cloudformation-templates/
 │   └── (Your YAML/JSON templates here)
 ├── diagrams/
