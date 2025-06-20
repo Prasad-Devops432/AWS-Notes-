@@ -14,7 +14,7 @@ Feel free to explore my repositories — I'm here to learn and collaborate.
 - Practice secure and scalable infrastructure design  
 - Apply DevOps tools and Git workflows
 
-## 📸 Sample Diagram
+
 
 # AWS Cloud Infrastructure Projects ☁️💻
 
