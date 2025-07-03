@@ -22,3 +22,6 @@ git pull                    # Fetch updates (e.g., get teammate’s changes)
 git branch feature-x        # Create a branch (e.g., for a new UI feature)
 git checkout feature-x      # Switch to branch
 git status                  # Check changes (e.g., see modified files
+
+
+Real-World Example: A startup uses GitHub to manage a Node.js app’s codebase, with developers pushing updates daily.
