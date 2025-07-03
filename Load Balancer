@@ -1,0 +1,10 @@
+What: Distributes incoming traffic across multiple EC2 instances for availability and performance.
+
+Real-World Example: A busy restaurant (your app) has multiple waiters (EC2 instances). A host (Load Balancer) assigns customers (traffic) to available waiters to prevent overload and ensure quick service.
+
+Types:
+ALB (Application Load Balancer): For HTTP/HTTPS (e.g., routes traffic to a web app’s login page).
+NLB (Network Load Balancer): For TCP/UDP (e.g., gaming servers with low-latency needs).
+GLB (Gateway Load Balancer): For third-party firewalls (e.g., security appliances).
+
+Example: Netflix uses ALBs to distribute streaming requests across servers globally, ensuring smooth playback.
