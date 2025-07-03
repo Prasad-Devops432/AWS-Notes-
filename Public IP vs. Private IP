@@ -1,0 +1,12 @@
+Public IP:
+What: Internet-routable IP (e.g., 54.123.45.67).
+Example: A web server’s public IP lets users access a website (e.g., www.example.com).
+Behavior: Dynamic unless using an Elastic IP.
+
+
+Private IP:
+What: Non-internet-routable IP (e.g., 10.0.1.10).
+Example: A database server in a private subnet communicates with a web server using its private IP.
+Behavior: Fixed within the VPC.
+Difference: Public IPs allow internet access; private IPs are for internal VPC communication.
+Real-World Example: A company’s public-facing website uses a public IP, while its internal payroll system uses a private IP.
