@@ -1,0 +1,9 @@
+NAT Gateway
+What: Allows private subnet instances to access the internet (outbound) while blocking inbound connections.
+
+Real-World Example: A private office (private subnet) uses a secure internet gateway (NAT Gateway) to let employees download software updates without exposing the office to external hackers.
+
+How it Works:
+Deployed in a public subnet with an Elastic IP.
+Routes outbound traffic from private instances.
+Example: A database server in a private subnet uses a NAT Gateway to fetch security patches without being publicly accessible
