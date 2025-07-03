@@ -1,0 +1,14 @@
+Security Groups:
+What: Stateful firewall at the EC2 instance level, controlling inbound/outbound traffic.
+Real-World Example: Imagine a coffee shop (EC2 instance) with a bouncer (Security Group) at the door. The bouncer only lets in customers (traffic) on an approved list (e.g., HTTP port 80 for web access). If you’re allowed in, you can leave without re-checking (stateful).
+Rules: Only "Allow" rules. Example: Allow port 22 (SSH) for admin access.
+Applied: To specific instances.
+Network ACLs (NACLs):
+What: Stateless firewall at the subnet level, controlling traffic entering/leaving a subnet.
+Real-World Example: Think of a gated community (subnet) with a security gate (NACL). The gate checks both incoming and outgoing cars (traffic) against a list, allowing or denying explicitly. If you’re allowed in, you still need permission to leave (stateless).
+Rules: Supports "Allow" and "Deny." Example: Deny port 23 (Telnet) to block insecure access.
+Applied: To all instances in a subnet.
+Key Difference:
+
+Security Groups = instance-level, stateful, Allow-only.
+NACLs = subnet-level, stateless, Allow/Deny
