@@ -1,0 +1,7 @@
+What: Protocol for secure remote server access.
+
+Example: A developer uses SSH to log into an EC2 instance to update a web app, like editing code on a remote Linux server.
+
+Usage: ssh -i my-key.pem ec2-user@<public-ip> to access an EC2 Linux instance securely.
+
+Example: ssh -i prod-key.pem ec2-user@52.14.123.45 to troubleshoot a production server.
