@@ -1,0 +1,78 @@
+#############################################
+# 1. Directory and File Management
+#############################################
+mkdir -v foldername                 # Create directory, show what is created
+mkdir -p path/to/folder             # Create parent and subdirectories as needed
+touch filename                      # Create a new empty file or update timestamp
+ls                                  # List files and folders
+ls -l                               # Long listing format
+ls -lh                              # Human-readable sizes
+ls -lhr                             # Human-readable, reverse order
+ls -lhrt                            # Sorted by modification time
+ls -lrthi                           # Show inode numbers
+cd directory                        # Change to directory
+cd -                                # Change to previous directory
+pwd                                 # Show current directory path
+tree                                # Show directory structure (install if needed)
+rm filename                         # Delete a file
+rmdir directory                     # Remove an empty directory
+cp *.txt directory/                 # Copy all .txt files to a directory
+mv file1 file2                      # Rename or move files
+
+#############################################
+# 2. File Viewing and Editing
+#############################################
+cat filename                        # View file contents
+cat -n filename                     # Show line numbers
+cat file1 > file2                   # Copy (overwrite) file1 to file2
+cat file1 >> file2                  # Append file1 to file2
+vi filename                         # Edit a file
+#   i            # Insert mode in vi
+#   Esc :wq      # Save and quit in vi
+#   Esc :q!      # Quit without saving in vi
+#   :set nu      # Show line numbers in vi
+tail -n 10 filename                 # Show last 10 lines
+head -n 10 filename                 # Show first 10 lines
+
+#############################################
+# 3. User and Permissions
+#############################################
+whoami                              # Show current username
+sudo su -                           # Become root user
+usermod -aG group user              # Add user to a group
+
+#############################################
+# 4. Process and System Monitoring
+#############################################
+ps                                  # Show running processes
+ps aux                              # Detailed process list
+pgrep processname                   # Find process IDs
+htop                                # Interactive process viewer (install if needed)
+ptree -p                            # Show process hierarchy
+free -h                             # Check memory usage
+df -h                               # Disk space usage (human-readable)
+du -sh folder                       # Disk usage for a folder
+
+#############################################
+# 5. Networking and Logs
+#############################################
+netstat -tunl                       # Show open ports
+lsof -i :port                       # Show processes using a port
+tcpdump -i eth0 port 80             # Capture network packets for port 80
+journalctl                          # View system logs
+journalctl -u service               # Logs for a specific service
+journalctl -b                       # Logs since last boot
+
+#############################################
+# 6. System Configuration and Utilities
+#############################################
+hostnamectl set-hostname name       # Change system hostname
+wget URL                            # Download files from the web
+tar -zxvf file.tar.gz               # Extract a tar.gz file
+
+#############################################
+# 7. Shortcuts and Tips
+#############################################
+Ctrl+C                              # Stop a running command
+Ctrl+R                              # Search command history
+export PS1="name $ "                # Customize your shell prompt
