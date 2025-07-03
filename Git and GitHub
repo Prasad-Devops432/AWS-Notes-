@@ -1,0 +1,24 @@
+Git:
+What: Version control system for tracking code changes.
+Example: A developer tracks changes to a Python app’s codebase locally, creating branches for new features.
+
+
+
+GitHub:
+What: Cloud platform for hosting Git repositories, enabling collaboration.
+Example: A team shares a web app’s code on GitHub, allowing multiple developers to contribute.
+Basic Git Commands:
+bash
+
+
+
+
+git init                    # Start a new project (e.g., initialize a repo for a Flask app)
+git clone <url>             # Download a repo (e.g., clone a team’s Django project)
+git add app.py              # Stage a file (e.g., add a new feature file)
+git commit -m "Add login"   # Commit changes (e.g., save login feature)
+git push origin main        # Upload to GitHub (e.g., share with team)
+git pull                    # Fetch updates (e.g., get teammate’s changes)
+git branch feature-x        # Create a branch (e.g., for a new UI feature)
+git checkout feature-x      # Switch to branch
+git status                  # Check changes (e.g., see modified files
