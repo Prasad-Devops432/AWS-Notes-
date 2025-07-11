@@ -1,78 +1,94 @@
-#############################################
-# 1. Directory and File Management
-#############################################
-mkdir -v foldername                 # Create directory, show what is created
-mkdir -p path/to/folder             # Create parent and subdirectories as needed
-touch filename                      # Create a new empty file or update timestamp
-ls                                  # List files and folders
-ls -l                               # Long listing format
-ls -lh                              # Human-readable sizes
-ls -lhr                             # Human-readable, reverse order
-ls -lhrt                            # Sorted by modification time
-ls -lrthi                           # Show inode numbers
-cd directory                        # Change to directory
-cd -                                # Change to previous directory
-pwd                                 # Show current directory path
-tree                                # Show directory structure (install if needed)
-rm filename                         # Delete a file
-rmdir directory                     # Remove an empty directory
-cp *.txt directory/                 # Copy all .txt files to a directory
-mv file1 file2                      # Rename or move files
+````markdown
+# 🐧 Linux Command Cheat Sheet with Real-Time Examples
 
-#############################################
-# 2. File Viewing and Editing
-#############################################
-cat filename                        # View file contents
-cat -n filename                     # Show line numbers
-cat file1 > file2                   # Copy (overwrite) file1 to file2
-cat file1 >> file2                  # Append file1 to file2
-vi filename                         # Edit a file
-#   i            # Insert mode in vi
-#   Esc :wq      # Save and quit in vi
-#   Esc :q!      # Quit without saving in vi
-#   :set nu      # Show line numbers in vi
-tail -n 10 filename                 # Show last 10 lines
-head -n 10 filename                 # Show first 10 lines
+This markdown document contains categorized Linux commands with real-world usage examples. Suitable for beginners and IT students working with Linux systems.
 
-#############################################
-# 3. User and Permissions
-#############################################
-whoami                              # Show current username
-sudo su -                           # Become root user
-usermod -aG group user              # Add user to a group
+## 📁 1. Directory and File Management
 
-#############################################
-# 4. Process and System Monitoring
-#############################################
-ps                                  # Show running processes
-ps aux                              # Detailed process list
-pgrep processname                   # Find process IDs
-htop                                # Interactive process viewer (install if needed)
-ptree -p                            # Show process hierarchy
-free -h                             # Check memory usage
-df -h                               # Disk space usage (human-readable)
-du -sh folder                       # Disk usage for a folder
+```bash
+mkdir -v myproject                # Create directory and show confirmation
+mkdir -p projects/webapp/logs     # Create nested folders
+touch notes.txt                   # Create an empty file
+ls                                # List files in current directory
+ls -l                              # Long format list
+ls -lh                             # Human-readable file sizes
+ls -lhr                            # Reverse order by name
+ls -lhrt                           # Sort by time modified (latest last)
+ls -lrthi                          # Show inodes and sorted
+cd projects                        # Change into 'projects' directory
+cd -                               # Go back to previous directory
+pwd                                # Print current directory
+tree                               # Show directory tree (install with `sudo apt install tree`)
+rm old.txt                         # Remove a file named old.txt
+rmdir tempdir                      # Remove an empty directory
+cp *.txt backup/                   # Copy all text files to backup directory
+mv report.txt report-old.txt      # Rename report.txt to report-old.txt
+````
 
-#############################################
-# 5. Networking and Logs
-#############################################
-netstat -tunl                       # Show open ports
-lsof -i :port                       # Show processes using a port
-tcpdump -i eth0 port 80             # Capture network packets for port 80
-journalctl                          # View system logs
-journalctl -u service               # Logs for a specific service
-journalctl -b                       # Logs since last boot
+---
 
-#############################################
-# 6. System Configuration and Utilities
-#############################################
-hostnamectl set-hostname name       # Change system hostname
-wget URL                            # Download files from the web
-tar -zxvf file.tar.gz               # Extract a tar.gz file
+## 📄 2. File Viewing and Editing
 
-#############################################
-# 7. Shortcuts and Tips
-#############################################
-Ctrl+C                              # Stop a running command
-Ctrl+R                              # Search command history
-export PS1="name $ "                # Customize your shell prompt
+```bash
+cat notes.txt                     # View contents of the file
+cat -n notes.txt                  # View with line numbers
+cat header.txt > complete.txt     # Overwrite complete.txt with header.txt
+cat footer.txt >> complete.txt    # Append footer.txt to complete.txt
+vi config.cfg                     # Open config.cfg in vi editor
+# Press 'i' to enter insert mode
+# Press 'Esc :wq' to save and quit
+# Press 'Esc :q!' to quit without saving
+# Type ':set nu' to enable line numbers
+tail -n 10 /var/log/syslog        # View last 10 lines of syslog
+head -n 10 /etc/passwd            # View first 10 lines of passwd file
+```
+## 👤 3. User and Permissions
+
+```bash
+whoami                            # Show current logged-in user
+sudo su -                         # Switch to root user
+usermod -aG docker john           # Add user 'john' to 'docker' group
+```
+## 🖥️ 4. Process and System Monitoring
+
+```bash
+ps                                # Show current processes for this shell
+ps aux                            # Show all processes
+pgrep sshd                        # Find PID of sshd service
+htop                              # Interactive process monitor (install: sudo apt install htop)
+ptree -p                          # Process tree with PIDs (install: sudo apt install psmisc)
+free -h                           # View memory usage
+df -h                             # Disk usage of all mounted filesystems
+du -sh ~/Downloads                # Disk usage of Downloads folder
+``
+
+## 🌐 5. Networking and Logs
+
+```bash
+netstat -tunl                     # Show active ports and services
+lsof -i :8080                     # List processes using port 8080
+tcpdump -i eth0 port 443          # Capture HTTPS packets on eth0
+journalctl                        # View all system logs
+journalctl -u nginx.service       # Logs for NGINX service
+journalctl -b                     # Logs since last system boot
+```
+
+## ⚙️ 6. System Configuration and Utilities
+
+```bash
+hostnamectl set-hostname server01   # Change hostname to server01
+wget https://example.com/file.zip   # Download file from the web
+tar -zxvf archive.tar.gz            # Extract archive to current directory
+```
+
+## 💡 7. Shortcuts and Tips
+
+```bash
+Ctrl+C                            # Stop a running command
+Ctrl+R                            # Reverse search command history
+export PS1="dev $ "              # Change shell prompt to 'dev $ '
+```
+
+📝 **Note**: Use `man <command>` to learn more about each command in your terminal.
+
+```
