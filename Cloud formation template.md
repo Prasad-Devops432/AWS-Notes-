@@ -1,9 +1,5 @@
-# Code for ASW-CFT 
-# Code for ASW-CFT for The EC2 instance Creation Template
-# This code creates an EC2 instance, a security group for SSH access, and an S3 bucket with public read access.
-# Ensure to update the AMI ID and security group ID with valid values for your AWS region
 AWSTemplateFormatVersion: 2010-09-09
-Description: EC2 Instance Creation Template
+Description: EC2 Instance Creation Template with Security Group and S3 Bucket
 
 Parameters:
   KeyName:
@@ -16,7 +12,7 @@ Resources:
     Properties:
       InstanceType: t2.micro
       ImageId: ami-096fd57f2d61eec65 # Update with a valid AMI ID for your region
-      KeyName: labkey
+      KeyName: !Ref KeyName
       SecurityGroupIds:
         - sg-06df394c86f8f97d0 # Update with a valid security group ID
 
@@ -29,24 +25,21 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: 0.0.0.0/0
-  S3 Bucket:
+
+  MyS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: labbucket2023
       AccessControl: PublicRead
       Tags:
-        - Key: labkey
-          Value: My S3 Bucket
+        - Key: Project
+          Value: LabBucket
 
 Outputs:
   InstanceId:
     Description: The Instance ID
-    Value: 
-      Ref: MyEC2Instance
+    Value: !Ref MyEC2Instance
+
   PublicIP:
     Description: Public IP address of the EC2 instance
-    Value: 
-      Fn::GetAtt: 
-        - MyEC2Instance
-        - PublicIp
-
+    Value: !GetAtt MyEC2Instance.PublicIp
