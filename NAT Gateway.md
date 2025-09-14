@@ -1,7 +1,7 @@
-```markdown
 # 🌐 NAT Gateway (AWS Networking)
 
 ## 📍 What is it?
+
 A **NAT Gateway** enables **private subnet instances** to access the internet **outbound** while blocking **inbound** traffic from the internet.
 
 ---
@@ -19,20 +19,20 @@ Think of a **private office (private subnet)** where employees download software
 - 🚪 **Routing**: Routes **outbound traffic** from instances in the **private subnet**
 - ❌ **Inbound Traffic**: Automatically blocked to keep instances private
 
-> 🧪 Example:  
-A database server in a private subnet uses the NAT Gateway to download **security patches** without being exposed to the public internet.
+> 🧪 **Example**:  
+> A database server in a private subnet uses the NAT Gateway to download **security patches** without being exposed to the public internet.
 
 ---
 
 ## 📐 Architecture Summary
 
-| Component         | Description                                         |
+| Component       | Description                                         |
 |------------------|-----------------------------------------------------|
-| NAT Gateway       | Handles outbound-only traffic for private subnets |
-| Elastic IP        | Provides internet access                           |
-| Route Table       | Configures routes from private to NAT Gateway      |
-| Public Subnet     | Where NAT Gateway resides                          |
-| Private Subnet    | Where EC2 instances operate securely               |
+| NAT Gateway      | Handles outbound-only traffic for private subnets   |
+| Elastic IP       | Provides internet access                            |
+| Route Table      | Configures routes from private to NAT Gateway       |
+| Public Subnet    | Where NAT Gateway resides                           |
+| Private Subnet   | Where EC2 instances operate securely                |
 
 ---
 
@@ -43,4 +43,3 @@ A database server in a private subnet uses the NAT Gateway to download **securit
 - Easy to configure and fully **managed by AWS**
 
 ---
-```
