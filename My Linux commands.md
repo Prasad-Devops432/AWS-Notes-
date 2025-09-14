@@ -91,4 +91,4 @@ export PS1="dev $ "              # Change shell prompt to 'dev $ '
 
 📝 **Note**: Use `man <command>` to learn more about each command in your terminal.
 
-```
+
